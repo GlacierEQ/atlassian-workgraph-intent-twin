@@ -1,0 +1,11 @@
+{
+  "schema": "glaciereq.promotion-authority-grant.v1",
+  "repository": "GlacierEQ/atlassian-workgraph-intent-twin",
+  "source_sha": "67493ad9a9d453ac606bc6b647187318f496c32bc1fd3c26abc24d61561c24f2",
+  "proof_receipt_digest": "26c78f5855e228ce2edc7a5a593c7ef28edcea7c8e1600e2b29ecde477941609",
+  "not_after": 1788948639.994507,
+  "mac": "a4a33c819a1a814623abbec164f71a5df223d3d348efc8fef411b456bd49ac95",
+  "issuer": "local_operator_promotion_authority",
+  "verified": true,
+  "secret_ref": "src/promotion_authority.py::LOCAL_OPERATOR_SECRET"
+}

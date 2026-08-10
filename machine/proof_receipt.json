@@ -1,0 +1,31 @@
+{
+  "schema": "glaciereq.proof-receipt.v1",
+  "repository": "GlacierEQ/atlassian-workgraph-intent-twin",
+  "source_sha": "67493ad9a9d453ac606bc6b647187318f496c32bc1fd3c26abc24d61561c24f2",
+  "proof_id": "elite-atlassian-workgraph-intent-twin-1786356639",
+  "environment": {
+    "python": "/Users/kcbflux/.local/bin/python3.11",
+    "PYTHONPATH": "/Users/kcbflux/GlacierEQ_Swarm/job-app/repos/atlassian-workgraph-intent-twin:/Users/kcbflux/GlacierEQ_Swarm/job-app/repos/atlassian-workgraph-intent-twin/src",
+    "entry": "unittest"
+  },
+  "tests": [
+    "/Users/kcbflux/.local/bin/python3.11 -m unittest discover -s tests -v (x2)"
+  ],
+  "adversarial_tests": [
+    "tests/test_adversarial.py"
+  ],
+  "runtime": {
+    "operate": "scripts/operate.py (x2)",
+    "dual_run_ok": true,
+    "proof_dual_run_ok": true
+  },
+  "result": "PASS",
+  "limitations": [
+    "not production deployed",
+    "reference implementation only"
+  ],
+  "timestamp": "2026-08-10T10:10Z",
+  "artifact_hashes": {
+    "operability_receipt": "509231713c7f786461300ca2f5c118d7274e9fad67b41856fb6718d8237b0a15"
+  }
+}

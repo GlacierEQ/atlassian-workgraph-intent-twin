@@ -1,0 +1,12 @@
+{
+  "schema": "glaciereq.repo-capabilities.v1",
+  "repository": "GlacierEQ/atlassian-workgraph-intent-twin",
+  "capabilities": [
+    {
+      "id": "workgraph-intent-twin",
+      "name": "Workgraph Intent Twin",
+      "status": "SCAFFOLD",
+      "module": "src/workgraph_intent_twin.py"
+    }
+  ]
+}
