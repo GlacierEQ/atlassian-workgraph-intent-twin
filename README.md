@@ -1,50 +1,50 @@
 # Workgraph Intent Twin
 
-Independent GlacierEQ portfolio exhibit aligned to **Atlassian** operating themes.
+Independent GlacierEQ portfolio implementation aligned to **Atlassian** operating themes.
 
-> **Not affiliated.** This repository is not affiliated with, endorsed by, employed by, or deployed at Atlassian.
-> No proprietary access, production deployment, customer impact, or company partnership is claimed.
+> **Not affiliated.** This repository is not affiliated with, endorsed by, employed by, or deployed at Atlassian. No proprietary access, production deployment, customer impact, or company partnership is claimed.
 
-## Bottleneck (GlacierEQ hypothesis)
+## Purpose
 
-Agent-driven Jira/Confluence changes lose intent alignment as workflows fan out across tickets and docs.
+Keep agent-driven Jira/document changes aligned with the original multi-object objective as work fans out across tickets, docs, dependencies, statuses, and acceptance tests.
 
-**Brick wall:** Silent success without receipts; affiliation or production claims without evidence.
+## Implemented twin
 
-**Observed public pressure (snapshot hypothesis):** Public market pressure toward AI-enabled products and operators (hypothesis only).
+`WorkgraphIntentTwin` validates a machine-readable intent contract containing:
 
-## Innovation mechanism
+- admitted work objects and kinds;
+- allowed and forbidden fields per object;
+- allowed status transitions;
+- dependency edges;
+- required acceptance tests;
+- maximum change-set blast radius.
 
-**Workgraph Intent Twin** — Maintain a machine-readable intent twin for each change set and continuously compare patches against forbidden surfaces and acceptance tests.
+A proposed workgraph change is refused for out-of-scope objects, forbidden or unapproved fields, status drift, unsatisfied dependencies, missing/failed required tests, oversized blast radius, duplicate changes, or cyclic/missing dependency definitions. The receipt carries deterministic intent and change-set digests plus structured findings.
 
-## Target roles
+## Run
 
-- Applied AI Systems Engineer
-- Forward-Deployed Engineer
+```bash
+python -m pytest -q
+python scripts/operate.py
+```
 
-## Application move
+Build/install:
 
-Lead with a small, inspectable Workgraph Intent Twin exhibit and explicit non-affiliation boundary.
+```bash
+python -m pip install build
+python -m build
+python -m pip install dist/*.whl
+workgraph-intent-twin
+```
 
-## Current scaffold state
+## Proof surface
 
-This leaf is a **scaffold**: contracts, tests, and a stub mechanism exist so another engineer/AI can fill production-grade code without inventing company affiliation.
+- `src/workgraph_intent_twin.py` — graph/intent/acceptance verifier
+- `src/workgraph_intent_cli.py` — installable execution surface
+- `tests/test_workgraph_intent_twin.py` — scope, field, status, dependency, acceptance and cycle behavior
+- `.github/workflows/tests.yml` — tests + cold-start + wheel build/install + installed CLI
+- `machine/` — existing Helix control-plane/promotion surfaces remain preserved
 
-| Surface | Path |
-|---------|------|
-| Mechanism stub | `src/workgraph_intent_twin.py` |
-| Operate entry | `scripts/operate.py` |
-| Contract tests | `tests/` |
-| Target contract | `machine/target-contract.json` |
-| **AI fill-in brief** | **`DEV_UP_INSTRUCTIONS.md`** |
-| Issue contract | `ISSUE_CONTRACT.md` |
+## Current boundary
 
-## Non-claims
-
-- No Atlassian employment, endorsement, proprietary data, or production use
-- No customer, revenue, latency, or scale claims without separate receipts
-- Scaffold tests define **intended behavior**, not verified production excellence
-
-## Next gate
-
-Implement mechanism + positive tests + operate receipt.
+This is a vendor-neutral verifier over normalized workgraph changes. It does not mutate Atlassian systems. A further deployment step is a Jira/Confluence adapter that compiles real issue/document deltas into this contract and blocks writes when intent drift is detected.
