@@ -1,0 +1,14 @@
+# AGENTS.md — atlassian-workgraph-intent-twin
+
+**Company:** GlacierEQ
+**Domain:** Autonomous Systems Engineering
+
+## Quick Rules
+- **Test command:** `PYTHONPATH=src pytest tests/ -v`
+- **Lint:** `ruff check src/ tests/`
+- **No drive-by edits** — load the skill first.
+
+## Architecture
+- `src/atlassian_workgraph_intent_twin/core.py` — Domain logic (Autonomous Systems Engineering)
+- `tests/` — Verified test suite
+- `.github/workflows/ci.yml` — Enforced CI pipeline
