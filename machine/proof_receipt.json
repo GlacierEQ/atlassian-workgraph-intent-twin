@@ -4,12 +4,12 @@
   "source_sha": "67493ad9a9d453ac606bc6b647187318f496c32bc1fd3c26abc24d61561c24f2",
   "proof_id": "elite-atlassian-workgraph-intent-twin-1786356639",
   "environment": {
-    "python": "/Users/kcbflux/.local/bin/python3.11",
-    "PYTHONPATH": "/Users/kcbflux/GlacierEQ_Swarm/job-app/repos/atlassian-workgraph-intent-twin:/Users/kcbflux/GlacierEQ_Swarm/job-app/repos/atlassian-workgraph-intent-twin/src",
+    "python": "${HOME}/.local/bin/python3.11",
+    "PYTHONPATH": "${HOME}/GlacierEQ_Swarm/job-app/repos/atlassian-workgraph-intent-twin:${HOME}/GlacierEQ_Swarm/job-app/repos/atlassian-workgraph-intent-twin/src",
     "entry": "unittest"
   },
   "tests": [
-    "/Users/kcbflux/.local/bin/python3.11 -m unittest discover -s tests -v (x2)"
+    "${HOME}/.local/bin/python3.11 -m unittest discover -s tests -v (x2)"
   ],
   "adversarial_tests": [
     "tests/test_adversarial.py"
